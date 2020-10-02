@@ -1,0 +1,31 @@
+From a73108245bce42cf3d57af8c4ee167e4f139e869 Mon Sep 17 00:00:00 2001
+From: cs469 <cs469@cs469.cs.toronto.edu>
+Date: Fri, 2 Oct 2020 17:31:43 -0400
+Subject: [PATCH] patches
+
+---
+ arch/x86/kernel/setup.c    | 3 ++-
+ "arch/x86/kernel/\177\177" | 0
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 "arch/x86/kernel/\177\177"
+
+diff --git a/arch/x86/kernel/setup.c b/arch/x86/kernel/setup.c
+index a3767e74c758..a7bc1a19977f 100644
+--- a/arch/x86/kernel/setup.c
++++ b/arch/x86/kernel/setup.c
+@@ -834,7 +834,8 @@ void __init setup_arch(char **cmdline_p)
+ 	 */
+ 	__flush_tlb_all();
+ #else
+-	printk(KERN_INFO "Command line: %s\n", boot_command_line);
++        printk("Welcome to gaoyiwei's kernel");
++        printk(KERN_INFO "Command line: %s\n", boot_command_line);
+ 	boot_cpu_data.x86_phys_bits = MAX_PHYSMEM_BITS;
+ #endif
+ 
+diff --git "a/arch/x86/kernel/\177\177" "b/arch/x86/kernel/\177\177"
+new file mode 100644
+index 000000000000..e69de29bb2d1
+-- 
+2.20.1
+
